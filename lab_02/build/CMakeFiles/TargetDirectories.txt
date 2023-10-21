@@ -1,3 +1,0 @@
-/home/poulou/Desktop/ООП/lab_02/build/CMakeFiles/rebuild_cache.dir
-/home/poulou/Desktop/ООП/lab_02/build/CMakeFiles/edit_cache.dir
-/home/poulou/Desktop/ООП/lab_02/build/CMakeFiles/app.dir
