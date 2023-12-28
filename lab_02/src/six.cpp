@@ -3,10 +3,10 @@
 #include <exception>
 
 bool SixCheck(char c){
-    return (0 <= c - '0') && (6 > c - '0');
+    return (0 <= c - '0') && (6 > c - '0'); //проверка на шестиричность
 }
 
-Six::Six() : _size{0}, _array{nullptr} {}
+Six::Six() : _size{0}, _array{nullptr} {} //конструктор по умолчанию
 
 Six::Six(const size_t & n, unsigned char t){
     _size = n;
@@ -35,7 +35,7 @@ Six::Six(const std::string & t) {
     
 }
 
-Six::Six(const Six &other) noexcept{
+Six::Six(const Six &other) noexcept{ //конструктор копирования
     _size  = other._size;
     _array = new unsigned char[_size];
     for(size_t i{0};i<_size;++i){
@@ -43,14 +43,14 @@ Six::Six(const Six &other) noexcept{
     }
 } 
 
-Six::Six(Six&& other) noexcept{
+Six::Six(Six&& other) noexcept{ //конструктор перемещения
     _size = other._size;
     _array = other._array;
     other._size = 0;
     other._array = nullptr;
 }
 
-Six::~Six() noexcept {
+Six::~Six() noexcept { //деструктор освобождает выделенную память
     if (_size > 0) {
         _size = 0;
         delete[] _array;
